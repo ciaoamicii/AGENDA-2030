@@ -12,7 +12,7 @@ html, body {
 }
 
 html::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none;
 }
 
 body {
@@ -39,6 +39,7 @@ body {
     justify-content: space-between;
     padding: 36px var(--spacing-side);
     background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 10;
 }
 
