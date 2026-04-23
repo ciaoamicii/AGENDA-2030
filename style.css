@@ -35,7 +35,6 @@ body {
     justify-content: space-between;
     padding: 36px var(--spacing-side);
     background-color: var(--color-white);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 10;
 }
 
@@ -135,6 +134,8 @@ body {
 /* #region Pagina Informazioni */
 .info-page {
     padding: 32px var(--spacing-side);
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .info-page-title {
@@ -196,6 +197,7 @@ hr {
     display: flex;
     gap: 32px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Card obiettivo con effetto hover */
