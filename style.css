@@ -11,6 +11,10 @@ html, body {
     overflow-x: hidden; /* elimina scroll orizzontale */
 }
 
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
@@ -133,7 +137,7 @@ body {
 
 /* #region Pagina Informazioni */
 .info-page {
-    padding: 32px var(--spacing-side);
+    padding: 60px 10%;
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -141,35 +145,35 @@ body {
 .info-page-title {
     font-size: clamp(28px, 4vw, 48px);
     font-weight: bold;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 /* Sezione intro */
 .info-intro {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 80px;
     margin-bottom: 48px;
 }
 
 .info-intro-img img {
-    width: 280px;
+    width: 450px;
     height: auto;
     border-radius: 12px;
 }
 
 .info-intro-title {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
 .info-intro-text p {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--color-text-muted);
-    line-height: 1.7;
-    max-width: 500px;
+    line-height: 1.8;
+    max-width: 550px;
 }
 
 hr {
@@ -180,22 +184,22 @@ hr {
 
 /* Sezione obiettivi */
 .info-goals-title {
-    font-size: clamp(20px, 3vw, 28px);
+    font-size: clamp(22px, 3vw, 32px);
     font-weight: bold;
     margin-bottom: 16px;
 }
 
 .info-goals-text {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--color-text-muted);
     line-height: 1.7;
-    max-width: 800px;
+    max-width: 900px;
     margin-bottom: 40px;
 }
 
 .info-goals-cards {
     display: flex;
-    gap: 32px;
+    gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -203,10 +207,10 @@ hr {
 /* Card obiettivo con effetto hover */
 .info-goal-card {
     flex: 1;
-    min-width: 180px;
-    max-width: 260px;
+    min-width: 250px;
+    max-width: 380px;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
