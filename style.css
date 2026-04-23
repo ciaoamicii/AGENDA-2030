@@ -3,6 +3,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* elimina scroll orizzontale */
 }
 
 body {
@@ -128,13 +134,13 @@ body {
 
 /* #region Pagina Informazioni */
 .info-page {
-    padding: 60px var(--spacing-side);
+    padding: 32px var(--spacing-side);
 }
 
 .info-page-title {
     font-size: clamp(28px, 4vw, 48px);
     font-weight: bold;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 /* Sezione intro */
