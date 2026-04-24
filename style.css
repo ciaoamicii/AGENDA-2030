@@ -295,8 +295,6 @@ hr {
     text-align: center;
 }
 
-/* #endregion */
-
 .goal-card {
     position: relative;
 }
@@ -333,3 +331,6 @@ hr {
 .goal-card:hover .goal-overlay {
     opacity: 1; /* appare solo all'hover */
 }
+
+/* #endregion */
+
