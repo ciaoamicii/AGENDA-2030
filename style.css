@@ -76,6 +76,69 @@ body {
 .menu a:hover {
     color: var(--color-black);
 }
+
+/* Dropdown Focus */
+.menu .dropdown {
+    position: relative;
+}
+
+.menu .dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu .dropdown > a::after {
+    content: '▾';
+    font-size: 13px;
+    transition: transform 0.2s;
+}
+
+.menu .dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    background-color: var(--color-white);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    border-radius: 10px;
+    min-width: 220px;
+    padding: 8px 0;
+    z-index: 100;
+    flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu a {
+    padding: 11px 20px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.65);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+    color: var(--color-black);
+}
+
+.dropdown-menu .drop-num {
+    font-size: 11px;
+    font-weight: 900;
+    color: rgba(0,0,0,0.18);
+    min-width: 20px;
+}
 /* #endregion */
 
 /* #region Hero (index.html) */
