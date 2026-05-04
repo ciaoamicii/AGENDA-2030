@@ -82,31 +82,32 @@ body {
     position: relative;
 }
 
-.menu .dropdown > a {
+.menu .dropdown > .dropdown-toggle {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
+    cursor: pointer;
 }
 
-.menu .dropdown > a::after {
-    content: '▾';
-    font-size: 13px;
-    transition: transform 0.2s;
-}
-
-.menu .dropdown:hover > a::after {
-    transform: rotate(180deg);
+/* Ponte invisibile tra voce e menu: evita che il mouse "cada nel vuoto" */
+.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 16px; /* copre il gap sotto la voce */
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: calc(100% + 14px);
+    top: calc(100% + 16px);
     right: 0;
     background-color: var(--color-white);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
     border-radius: 10px;
-    min-width: 220px;
+    min-width: 230px;
     padding: 8px 0;
     z-index: 100;
     flex-direction: column;
@@ -125,7 +126,7 @@ body {
     transition: background 0.15s, color 0.15s;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .dropdown-menu a:hover {
@@ -133,12 +134,13 @@ body {
     color: var(--color-black);
 }
 
-.dropdown-menu .drop-num {
-    font-size: 11px;
+.drop-num {
+    font-size: 12px;
     font-weight: 900;
-    color: rgba(0,0,0,0.18);
-    min-width: 20px;
+    color: rgba(0,0,0,0.2);
+    min-width: 22px;
 }
+
 /* #endregion */
 
 /* #region Hero (index.html) */
