@@ -861,3 +861,142 @@ hr {
     color: rgba(255,255,255,0.3);
 }
 /* #endregion */
+
+/* #region Media Query Mobile */
+@media (max-width: 768px) {
+
+    /* Topbar */
+    .topbar {
+        padding: 16px 20px;
+    }
+
+    .site-name h1 {
+        font-size: 18px;
+    }
+
+    .menu {
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero-content {
+        padding: 0 16px;
+    }
+
+    .learn-more {
+        margin-top: 24px;
+    }
+
+    /* Sezione ONU */
+    .un-section {
+        padding: 48px 24px;
+    }
+
+    .un-section-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    /* Pagina Informazioni */
+    .info-page {
+        padding: 40px 5%;
+    }
+
+    .info-intro {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .info-intro-img img {
+        width: 100%;
+    }
+
+    .info-intro-text p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .info-goals-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-goal-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Pagina Obiettivi */
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 0 5%;
+    }
+
+    /* Pagine dettaglio obiettivo */
+    .detail-hero {
+        flex-direction: column;
+        padding: 40px 5%;
+        gap: 32px;
+    }
+
+    .detail-hero-img img {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .detail-section {
+        padding: 0 5%;
+    }
+
+    .detail-targets {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-related {
+        flex-direction: column;
+    }
+
+    .detail-related-card {
+        max-width: 100%;
+    }
+
+    .detail-back {
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: center;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 20px 24px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 24px;
+    }
+
+    .footer-credits,
+    .footer-legal,
+    .footer-copy {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .goal-overlay h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .goal-overlay p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+}
+/* #endregion */
