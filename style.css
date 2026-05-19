@@ -43,6 +43,10 @@ body {
     z-index: 10;
 }
 
+.topbar:hover {
+    background-color: #b8d4e8;
+}
+
 .logo-link {
     display: flex;
     align-items: center;
@@ -380,6 +384,8 @@ hr {
     font-size: clamp(24px, 4vw, 48px);
     font-weight: bold;
     margin-bottom: 16px;
+    font-family: 'Playfair Display', serif;
+    color: #009edb;
 }
 
 .goals-main-subtitle {
@@ -997,6 +1003,91 @@ hr {
     .goal-overlay p {
         font-size: 11px;
         line-height: 1.4;
+    }
+}
+/* #endregion */
+
+/* #region Scroll Top */
+.scroll-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 44px;
+    height: 44px;
+    background: #009edb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 99;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* #endregion */
+
+/* #region Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: 16px 24px;
+        gap: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        z-index: 99;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding: 8px 0 0 16px;
     }
 }
 /* #endregion */
